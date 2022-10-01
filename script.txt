@@ -4,3 +4,6 @@ import org.apache.spark.ml.tuning.{ParamGridBuilder,TrainValidationSplit}
 import org.apache.log4j._
 import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.mllib.linalg.Vectors
+
+
+val data = spark.read.option("header","true").option("inferSchema","true").format("csv").load("file:///home/ubuntu/sparkfile/a.csv")
