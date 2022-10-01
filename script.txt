@@ -13,4 +13,4 @@ val ecommDF = data
 ecommDF.show()
 ecommDF.printSchema()
 
-val ecommDF1 = ecommDF.select(ecommDF("Yearly Amount Spent").as("label"),$"Avg. Session Length",$"Time on App",$"Time on Website",$"Length of Membership")
+val ecommDF1 = ecommDF.select(ecommDF("Yearly Amount Spent").as("label"),$"Avg Session Length",$"Time on App",$"Time on Website",$"Length of Membership")
