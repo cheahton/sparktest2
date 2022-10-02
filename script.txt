@@ -17,3 +17,5 @@ val ecommDF1 = ecommDF.select(ecommDF("Yearly Amount Spent").as("label"),$"Avg S
 
 val assembler = new VectorAssembler().setInputCols(Array("Avg Session Length","Time on App","Time on Website","Length of Membership")).setOutputCol("features")
 
+val ecommDF2 = assembler.transform(ecommDF1).select($"label",$"features")
+
