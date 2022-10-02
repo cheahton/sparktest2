@@ -14,3 +14,6 @@ ecommDF.show()
 ecommDF.printSchema()
 
 val ecommDF1 = ecommDF.select(ecommDF("Yearly Amount Spent").as("label"),$"Avg Session Length",$"Time on App",$"Time on Website",$"Length of Membership")
+
+val assembler = new VectorAssembler().setInputCols(Array("Avg Session Length","Time on App","Time on Website","Length of Membership")).setOutputCol("features")
+
