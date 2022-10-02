@@ -1,1 +1,8 @@
-val x = spark.read.json("file:///home/ubuntu/sparkfile/people.json"
+val x = spark.read.json("file:///home/ubuntu/sparkfile/people.json")
+
+x.show()
+
+x.printSchema()
+
+x.select($"name",$"age")
+
