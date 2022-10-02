@@ -4,5 +4,9 @@ x.show()
 
 x.printSchema()
 
-x.select($"name",$"age")
+x.select($"name",$"age").show()
+
+x.filter($"age" > 20).show()
+
+
 
