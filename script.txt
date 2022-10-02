@@ -21,3 +21,7 @@ val assembler = new VectorAssembler().setInputCols(Array("Avg Session Length","T
 
 val ecommDF3 = assembler.transform(ecommDF2).select($"label",$"features")
 
+val lr = new LinearRegression()
+
+val lrModel = lr.fit(ecommDF3)
+
