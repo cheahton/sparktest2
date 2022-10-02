@@ -13,3 +13,7 @@ def getDoubleValue(input: String) : Double = {
 	if (input == "B") result = 0.0
 	return result
 	}
+	
+val data = sc.textFile("file:///home/ubuntu/sparkfile/b.txt")
+data.count()
+
