@@ -1,1 +1,1 @@
-val x = spark.read.json("file:///home/ubuntu/sparkfile/people1.json"
+val x = spark.read.json("file:///home/ubuntu/sparkfile/people.json"
