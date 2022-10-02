@@ -31,3 +31,5 @@ println(s"Coefficients: ${lrModel.coefficients} Intercept: ${lrModel.intercept}"
 
 val trainingSummary = lrModel.summary
 
+println(s"numIterations: ${trainingSummary.totalIterations}")
+
