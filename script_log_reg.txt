@@ -1,6 +1,4 @@
-import org.apache.spark.ml.evaluation.MulticlassMetrics
-import org.apache.spark.ml.regression.LinearRegression
-import org.apache.spark.ml.tuning.{ParamGridBuilder,TrainValidationSplit}
-import org.apache.log4j._
-import org.apache.spark.ml.feature.VectorAssembler
-import org.apache.spark.mllib.linalg.Vectors
+import org.apache.spark.mlib.evaluation.MulticlassMetrics
+import org.apache.spark.mlib.classification.{LogisticRegressionWithLBFGS, LogisticRegressionModel}
+import org.apache.spark.mlib.regression.LabeledPoint
+import org.apache.spark.mlib.linalg.{Vector, Vectors}
