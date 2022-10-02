@@ -17,7 +17,7 @@ def getDoubleValue(input: String) : Double = {
 val data = sc.textFile("file:///home/ubuntu/sparkfile/b.txt")
 data.count()
 
-val parsedData = data.map(line => 
+val parsedData = data.map{line => 
 val parts = line.split(",")
-LabeledPoint(getDoubleValue(parts(6)), Vectors.dense(parts.slice(0,6).map(x => getDoubleValue(x))))
+LabeledPoint(getDoubleValue(parts(6)), Vectors.dense(parts.slice(0,6).map(x => getDoubleValue(x))))}
 
