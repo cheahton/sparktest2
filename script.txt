@@ -33,3 +33,8 @@ val trainingSummary = lrModel.summary
 
 println(s"numIterations: ${trainingSummary.totalIterations}")
 
+println(s"objectiveHistory: ${trainingSummary.objectiveHistory.toList}")
+
+trainingSummary.residuals.show()
+
+
