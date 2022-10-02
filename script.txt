@@ -26,3 +26,4 @@ val lr = new LinearRegression()
 
 val lrModel = lr.fit(ecommDF3)
 
+println(s"Coefficients: ${lrModel.coefficients} Intercept: ${lrModel.intercept}")
