@@ -15,7 +15,9 @@ ecommDF.printSchema()
 
 val ecommDF1 = ecommDF.select(ecommDF("Yearly Amount Spent").as("label"),$"Avg Session Length",$"Time on App",$"Time on Website",$"Length of Membership")
 
+val ecommDF2 = ecommDF1.na.fill(0)
+
 val assembler = new VectorAssembler().setInputCols(Array("Avg Session Length","Time on App","Time on Website","Length of Membership")).setOutputCol("features")
 
-val ecommDF2 = assembler.transform(ecommDF1).select($"label",$"features")
+val ecommDF3 = assembler.transform(ecommDF2).select($"label",$"features")
 
