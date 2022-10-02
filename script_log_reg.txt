@@ -1,4 +1,4 @@
-import org.apache.spark.mlib.evaluation.MulticlassMetrics
-import org.apache.spark.mlib.classification.{LogisticRegressionWithLBFGS, LogisticRegressionModel}
-import org.apache.spark.mlib.regression.LabeledPoint
-import org.apache.spark.mlib.linalg.{Vector, Vectors}
+import org.apache.spark.mllib.evaluation.MulticlassMetrics
+import org.apache.spark.mllib.classification.{LogisticRegressionWithLBFGS, LogisticRegressionModel}
+import org.apache.spark.mllib.regression.LabeledPoint
+import org.apache.spark.mllib.linalg.{Vector, Vectors}
