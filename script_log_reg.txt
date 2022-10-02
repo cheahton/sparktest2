@@ -21,4 +21,12 @@ val parsedData = data.map{line =>
 val parts = line.split(",")
 LabeledPoint(getDoubleValue(parts(6)), Vectors.dense(parts.slice(0,6).map(x => getDoubleValue(x))))}
 
-println(parsedData.take(10).mlString("\n")
+println(parsedData.take(10).mkString("\n"))
+
+val splits = parsedData.randomSplit(Array(0.6,0.4), seed=11L)
+val trainingData = splits(0)
+val testData = splits(1)
+
+val model = new LogisticRegressionWithLBFGS.setNumClasses(2).run(trainingData)
+
+
