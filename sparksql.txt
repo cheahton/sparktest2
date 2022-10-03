@@ -16,5 +16,10 @@ mydata.printSchema()
 
 mydata.show(50)
 
-mydata.count.toDouble
+val totcount = mydata.count.toDouble
+
+val suscount = mydata.filter($"y" === "yes").count.toDouble
+
+val successrate = suscount/totcount * 100
+
 
