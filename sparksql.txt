@@ -16,5 +16,5 @@ mydata.printSchema()
 
 mydata.show(50)
 
-mydata.count.todouble()
+mydata.count.toDouble
 
