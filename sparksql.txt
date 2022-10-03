@@ -12,3 +12,7 @@ x.filter($"age" > 20).show()
 
 val mydata = spark.read.format("csv").option("inferSchema","true").option("header","true").load("file:///home/ubuntu/sparkfile/Bank_full.csv")
 
+mydata.printSchema()
+
+mydata.show(50)
+
