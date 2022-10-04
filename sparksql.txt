@@ -22,4 +22,13 @@ val suscount = mydata.filter($"y" === "yes").count.toDouble
 
 val successrate = suscount/totcount * 100
 
+mydata.select(avg($"balance")).show()
+
+mydata.createOrReplaceTempView("bankdata")
+
+x= spark.sql("select * from bankdata where age > 74")
+
+x.show()
+
+
 
