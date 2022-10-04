@@ -33,6 +33,5 @@ x.show()
 x.write.save("mynewdf")
 
 
-
-
+x.write.format("json").save("mynewdf1")
 
