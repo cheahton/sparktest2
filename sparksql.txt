@@ -35,3 +35,8 @@ x.write.save("mynewdf")
 
 x.write.format("json").save("mynewdf1")
 
+
+------------
+
+x = sc.textFile("/home/ubuntu/sparkfile/people.txt")
+
