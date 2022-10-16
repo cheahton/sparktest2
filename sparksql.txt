@@ -52,6 +52,7 @@ type(a)
 c = sc.parallelize(b)
 c.count()
 
+y.getNumPartitions()
 
 
 
