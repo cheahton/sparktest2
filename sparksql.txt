@@ -40,3 +40,7 @@ x.write.format("json").save("mynewdf1")
 
 x = sc.textFile("/home/ubuntu/sparkfile/people.txt")
 
+y = x.map(lambda n: n.upper())
+
+y.collect()
+
