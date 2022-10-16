@@ -44,3 +44,8 @@ y = x.map(lambda n: n.upper())
 
 y.collect()
 
+a = ('hello','world','cool','winter','summer')
+
+type(a)
+
+
