@@ -49,4 +49,9 @@ b = ['hello','world','cool','winter','summer']
 
 type(a)
 
+c = sc.parallelize(b)
+c.count()
+
+
+
 
