@@ -63,5 +63,12 @@ b = ['hello','world','cool','winter','summer']
 c = sc.parallelize(b,2).persist(pyspark.StorageLevel.MEMORY_ONLY)
 c.count()
 
+c.getStorageLevel()
+
+print(c.getStorageLevel())
+
+
+
+x = spark.read.format("json").option("inferSchema","true").option("header","true").load("/home/ubuntu/sparkfile/people.json")
 
 
