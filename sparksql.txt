@@ -52,7 +52,16 @@ type(a)
 c = sc.parallelize(b)
 c.count()
 
+
 y.getNumPartitions()
+
+
+import pyspark
+
+b = ['hello','world','cool','winter','summer']
+
+c = sc.parallelize(b,2).persist(pyspark.StorageLevel.MEMORY_ONLY)
+c.count()
 
 
 
