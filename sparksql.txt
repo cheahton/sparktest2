@@ -80,4 +80,7 @@ x.select("age").show()
 x.filter("age">19).show()
 
 
+y = spark.read.format("csv").option("inferSchema","true").option("header","true").load("/home/ubuntu/sparkfile/Bank_full.csv")
+
+
 
